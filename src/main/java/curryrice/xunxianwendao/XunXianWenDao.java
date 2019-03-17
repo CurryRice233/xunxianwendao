@@ -51,9 +51,10 @@ public class XunXianWenDao {
 		{
 			event.getRegistry().registerAll
 			(
-				
+				// Items
 				ItemList.item_jade=new ItemJade(),
 				
+				// Blocks
 				ItemList.jade_ore_item = registerItemBlock(BlockList.jade_ore,CreativeTabs.MAIN)
 			);
 			
