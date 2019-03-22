@@ -3,10 +3,8 @@ package curryrice.xunxianwendao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import curryrice.xunxianwendao.block.BlockJadeOre;
-import curryrice.xunxianwendao.block.BlockList;
-import curryrice.xunxianwendao.item.ItemJade;
-import curryrice.xunxianwendao.item.ItemList;
+import curryrice.xunxianwendao.block.*;
+import curryrice.xunxianwendao.item.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -53,9 +51,10 @@ public class XunXianWenDao {
 			(
 				// Items
 				ItemList.item_jade=new ItemJade(),
+				ItemList.item_jade_pickaxe=new ItemJadePickaxe(),
 				
 				// Blocks
-				ItemList.jade_ore_item = registerItemBlock(BlockList.jade_ore,CreativeTabs.MAIN)
+				ItemList.jade_ore_item = registerBlockItem(BlockList.jade_ore,CreativeTabs.MAIN)
 			);
 			
 			logger.info("Items registered.");
@@ -72,7 +71,7 @@ public class XunXianWenDao {
 			logger.info("Blocks registered.");
 		}
 		
-		private static Item registerItemBlock(Block block,ItemGroup itemGroup) {
+		private static Item registerBlockItem(Block block,ItemGroup itemGroup) {
 			return new ItemBlock(block, new Item.Properties().group(itemGroup)).setRegistryName(block.getRegistryName());
 		}
 	}

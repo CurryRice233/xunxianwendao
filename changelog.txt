@@ -1,3 +1,38 @@
+Build: 1.13.2-25.0.90 - Wed Mar 20 04:21:50 GMT 2019
+	lex:
+		Revive CapabilityProvider on entity revive. Madders should NOT need
+		this, as caps are copied via NBT.
+
+=========
+Build: 1.13.2-25.0.89 - Tue Mar 19 21:10:43 GMT 2019
+	lex:
+		Do not invalidate caps when entity is being moved across worlds. Should
+		fix #5500
+
+=========
+Build: 1.13.2-25.0.88 - Mon Mar 18 05:16:08 GMT 2019
+	lex:
+		Fix NPE in TileEntityPistonRender when class is created to early.
+
+=========
+Build: 1.13.2-25.0.87 - Sun Mar 17 20:51:19 GMT 2019
+	tterrag:
+		Handle null return from ResourcePackInfo.createResourcePack
+
+	bs2609:
+		Fix getDefaultCreatorModId for enchanted books (#5534)
+
+=========
+Build: 1.13.2-25.0.85 - Sat Mar 16 03:25:32 GMT 2019
+	cpw:
+		Allow login packets to only generate on server based connections Run
+		injectSnapshot on the client thread, wait for result and disconnect when
+		injectSnapshot fails. Fix DevServer to load MOD_CLASSES Fix
+		LaunchTesting to properly load log4j2 markers (don't use a static
+		variable in that class!)
+		Signed-off-by: cpw <cpw+github@weeksfamily.ca>
+
+=========
 Build: 1.13.2-25.0.84 - Thu Mar 14 23:34:05 GMT 2019
 	tterrag:
 		Exclude noci branches from travis
