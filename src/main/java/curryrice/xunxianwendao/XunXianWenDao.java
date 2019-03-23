@@ -6,8 +6,6 @@ import org.apache.logging.log4j.Logger;
 import curryrice.xunxianwendao.block.*;
 import curryrice.xunxianwendao.item.*;
 import net.minecraft.block.Block;
-import net.minecraft.init.Biomes;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemGroup;
@@ -23,6 +21,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod("xunxianwendao")
 public class XunXianWenDao {
@@ -37,14 +36,12 @@ public class XunXianWenDao {
 		
 		MinecraftForge.EVENT_BUS.register(this);
 		
-		Biomes.PLAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, 
-			    Biome.createCompositeFeature(Feature.MINABLE, 
-			        new MinableConfig(MinableConfig.IS_ROCK, Blocks.GOLD_BLOCK.getDefaultState(), 9), 
-			        Biome.COUNT_RANGE, new CountRangeConfig(20, 0, 0, 64)));
+		
 	}
 	
 	private void setup(final FMLCommonSetupEvent event)
 	{
+		this.registerOre();
 		logger.info("Setup method registered.");
 	}
 	
@@ -89,6 +86,19 @@ public class XunXianWenDao {
 		private static Item registerBlockItem(Block block,ItemGroup itemGroup) {
 			return new ItemBlock(block, new Item.Properties().group(itemGroup)).setRegistryName(block.getRegistryName());
 		}
+	}
+	
+	private void registerOre() {
+		ForgeRegistries.BIOMES.forEach(biome->biome.addFeature(
+				GenerationStage.Decoration.UNDERGROUND_ORES, 
+			    Biome.createCompositeFeature(
+			    		Feature.MINABLE, 
+				        new MinableConfig(MinableConfig.IS_ROCK, BlockList.jade_ore.getDefaultState(), 4), 
+				        Biome.COUNT_RANGE, 
+				        // countInChunk minHeight maxHeightBase maxHeight
+				        new CountRangeConfig(2, 0, 0, 16)
+				)
+		));
 	}
 	
 	
