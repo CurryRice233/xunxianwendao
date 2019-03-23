@@ -11,7 +11,7 @@ public class CreativeTabs {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack createIcon() {
-			return new ItemStack(ItemList.item_jade);
+			return new ItemStack(ItemList.item_jade_primary);
 		}
 	};
 }

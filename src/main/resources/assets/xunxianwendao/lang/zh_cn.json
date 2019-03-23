@@ -1,6 +1,10 @@
 {
-	"item.xunxianwendao.item_jade": "玉石",
+	"item.xunxianwendao.item_jade_primary": "初级玉石",
+	"item.xunxianwendao.item_jade_intermediate": "中级玉石",
+	"item.xunxianwendao.item_jade_advanced": "高级玉石",
+	
 	"item.xunxianwendao.item_jade_pickaxe": "玉石稿",
+	"item.xunxianwendao.item_jade_sword": "玉石剑",
 	
 	"block.xunxianwendao.jade_ore": "玉石矿",
 	

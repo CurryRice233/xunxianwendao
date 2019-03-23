@@ -6,9 +6,16 @@ import org.apache.logging.log4j.Logger;
 import curryrice.xunxianwendao.block.*;
 import curryrice.xunxianwendao.item.*;
 import net.minecraft.block.Block;
+import net.minecraft.init.Biomes;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.MinableConfig;
+import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,6 +36,11 @@ public class XunXianWenDao {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
 		
 		MinecraftForge.EVENT_BUS.register(this);
+		
+		Biomes.PLAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, 
+			    Biome.createCompositeFeature(Feature.MINABLE, 
+			        new MinableConfig(MinableConfig.IS_ROCK, Blocks.GOLD_BLOCK.getDefaultState(), 9), 
+			        Biome.COUNT_RANGE, new CountRangeConfig(20, 0, 0, 64)));
 	}
 	
 	private void setup(final FMLCommonSetupEvent event)
@@ -50,8 +62,11 @@ public class XunXianWenDao {
 			event.getRegistry().registerAll
 			(
 				// Items
-				ItemList.item_jade=new ItemJade(),
+				ItemList.item_jade_primary=new ItemJade(0),
+				ItemList.item_jade_intermediate=new ItemJade(1),
+				ItemList.item_jade_advanced=new ItemJade(2),
 				ItemList.item_jade_pickaxe=new ItemJadePickaxe(),
+				ItemList.item_jade_sword=new ItemJadeSword(),
 				
 				// Blocks
 				ItemList.jade_ore_item = registerBlockItem(BlockList.jade_ore,CreativeTabs.MAIN)

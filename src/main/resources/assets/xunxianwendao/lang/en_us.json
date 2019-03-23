@@ -1,6 +1,10 @@
 {
-	"item.xunxianwendao.item_jade": "Jade",
+	"item.xunxianwendao.item_jade_primary": "Primary Jade",
+	"item.xunxianwendao.item_jade_intermediate": "Intermediate Jade",
+	"item.xunxianwendao.item_jade_advanced": "Advanced Jade",
+	
 	"item.xunxianwendao.item_jade_pickaxe": "Jade Pickaxe",
+	"item.xunxianwendao.item_jade_sword": "Jade Sword",
 	
 	"block.xunxianwendao.jade_ore": "Jade Ore",
 	
