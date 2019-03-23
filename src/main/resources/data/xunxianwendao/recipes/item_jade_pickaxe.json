@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"AAA",
+		" B ",
+		" B "
+	],
+	"key": {
+		"A": [{
+			"item": "xunxianwendao:item_jade_primary"
+		}],
+		"B": [{
+			"item": "minecraft:stick"
+		}]
+		
+	},
+	"result": {
+		"item": "xunxianwendao:item_jade_pickaxe"
+	}
+}
