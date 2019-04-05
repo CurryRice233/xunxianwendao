@@ -1,0 +1,21 @@
+{
+    "display": {
+        "icon": { "item": "xunxianwendao:jade_ore"},
+        "title": {"translate": "advancement.xunxianwendao.root.title"},
+		"description": {"translate": "advancement.xunxianwendao.root.description"},
+        "frame": "task",
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "join_world": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": { 
+				"from": "null",
+        		"to": "minecraft:overworld" 
+			}
+        }
+    }
+}

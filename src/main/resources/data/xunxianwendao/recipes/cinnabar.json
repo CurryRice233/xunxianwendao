@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "xunxianwendao:cinnabar_ore"
+  },
+  "result": "xunxianwendao:item_cinnabar",
+  "experience": 1.0,
+  "cookingtime": 200
+}

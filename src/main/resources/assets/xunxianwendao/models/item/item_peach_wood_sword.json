@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "xunxianwendao:item/item_jade_sword"
+        "layer0": "xunxianwendao:item/item_peach_wood_sword"
     }
 }

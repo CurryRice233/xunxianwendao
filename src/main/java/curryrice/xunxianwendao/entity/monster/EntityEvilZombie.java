@@ -1,9 +1,13 @@
 package curryrice.xunxianwendao.entity.monster;
 
 import curryrice.xunxianwendao.entity.EntityList;
+import curryrice.xunxianwendao.item.ItemList;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -17,6 +21,16 @@ public class EntityEvilZombie extends EntityZombie{
 	@Override
     public void onDeath(DamageSource cause){
 		super.onDeath(cause);
+		Entity entity = cause.getTrueSource();
+		if(entity instanceof EntityPlayer) {
+			ItemStack stack=((EntityPlayer)entity).getHeldItemMainhand();
+			if(stack.getItem()==ItemList.item_jade_sword && this.rand.nextInt(10)<1) {
+				this.entityDropItem(new ItemStack(ItemList.item_jade_primary, 1));
+			}else if(stack.getItem()==ItemList.item_peach_wood_sword) {
+				this.entityDropItem(new ItemStack(ItemList.item_jade_primary, 1));
+			}
+			
+		}
     }
 	@Override
 	public EntityType<?> getType() {

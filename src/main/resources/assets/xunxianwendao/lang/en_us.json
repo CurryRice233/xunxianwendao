@@ -2,11 +2,14 @@
 	"item.xunxianwendao.item_jade_primary": "Primary Jade",
 	"item.xunxianwendao.item_jade_intermediate": "Intermediate Jade",
 	"item.xunxianwendao.item_jade_advanced": "Advanced Jade",
+	"item.xunxianwendao.item_cinnabar": "Cinnabar",
 	
 	"item.xunxianwendao.item_jade_pickaxe": "Jade Pickaxe",
 	"item.xunxianwendao.item_jade_sword": "Jade Sword",
+	"item.xunxianwendao.item_peach_wood_sword": "Peach Wood Sword",
 	
 	"block.xunxianwendao.jade_ore": "Jade Ore",
+	"block.xunxianwendao.cinnabar_ore": "Cinnabar Ore",
 	
 	"entity.xunxianwendao.entity_evil_zombie": "Evil Zombie",
 	

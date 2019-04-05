@@ -1,4 +1,4 @@
-package curryrice.xunxianwendao;
+package curryrice.xunxianwendao.init;
 
 import curryrice.xunxianwendao.item.ItemList;
 import net.minecraft.item.ItemGroup;

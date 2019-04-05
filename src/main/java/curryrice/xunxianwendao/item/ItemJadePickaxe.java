@@ -1,7 +1,7 @@
 package curryrice.xunxianwendao.item;
 
-import curryrice.xunxianwendao.CreativeTabs;
 import curryrice.xunxianwendao.XunXianWenDao;
+import curryrice.xunxianwendao.init.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.util.ResourceLocation;

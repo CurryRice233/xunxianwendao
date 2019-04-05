@@ -2,13 +2,19 @@
 	"item.xunxianwendao.item_jade_primary": "初级玉石",
 	"item.xunxianwendao.item_jade_intermediate": "中级玉石",
 	"item.xunxianwendao.item_jade_advanced": "高级玉石",
+	"item.xunxianwendao.item_cinnabar": "朱砂",
 	
 	"item.xunxianwendao.item_jade_pickaxe": "玉石稿",
 	"item.xunxianwendao.item_jade_sword": "玉石剑",
+	"item.xunxianwendao.item_peach_wood_sword": "桃木剑",
 	
 	"block.xunxianwendao.jade_ore": "玉石矿",
+	"block.xunxianwendao.cinnabar_ore": "朱砂矿",
 	
 	"entity.xunxianwendao.entity_evil_zombie": "恶灵僵尸",
+	
+	"advancement.xunxianwendao.root.title":"玄幻世界",
+	"advancement.xunxianwendao.root.description":"踏上另一条与众不同的路",
 	
 	"itemGroup.xunxianwendao_main": "寻仙问道"
 }
