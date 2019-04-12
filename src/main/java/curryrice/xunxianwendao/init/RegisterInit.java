@@ -2,28 +2,56 @@ package curryrice.xunxianwendao.init;
 
 import curryrice.xunxianwendao.block.BlockList;
 import curryrice.xunxianwendao.client.entity.render.RenderEvilZombie;
+import curryrice.xunxianwendao.client.entity.render.RenderTalisman;
+import curryrice.xunxianwendao.entity.item.EntityTalisman;
 import curryrice.xunxianwendao.entity.monster.EntityEvilZombie;
+import curryrice.xunxianwendao.world.gen.PeachTreeFeature;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.init.Biomes;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.MinableConfig;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegisterInit {
-	
+	// -292075831436830414
 	public static void registerOre() {
-		oreGen(BlockList.jade_ore.getDefaultState(), 5, 15, 0, 0, 64);
-		oreGen(BlockList.cinnabar_ore.getDefaultState(), 4, 2, 0, 0, 16);
+		oreGen(BlockList.JADE_ORE.getDefaultState(), 5, 15, 0, 0, 64);
+		oreGen(BlockList.CINNABAR_ORE.getDefaultState(), 8, 2, 0, 0, 16);
 		
 	}
 	
+	
+	
 	public static void registerRender() {
+		//
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvilZombie.class,(RenderManager manager) -> new RenderEvilZombie (manager));
+		//ForgeRegistries.BIOMES.forEach(biome->biome.
+		
+		//Item
+		RenderingRegistry.registerEntityRenderingHandler(EntityTalisman.class,(RenderManager manager) -> new RenderTalisman (manager));
 	}
+	
+	
+	public static void registerFeature() {
+		// Peach Tree
+		Biome[] biomes = {Biomes.FOREST,Biomes.BIRCH_FOREST,Biomes.DARK_FOREST,Biomes.BIRCH_FOREST_HILLS,
+				Biomes.DARK_FOREST_HILLS,Biomes.FLOWER_FOREST};
+		for(Biome b:biomes) {
+			b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+					Biome.createCompositeFeature(new PeachTreeFeature(true), IFeatureConfig.NO_FEATURE_CONFIG, Biome.AT_SURFACE_WITH_EXTRA, 
+							new AtSurfaceWithExtraConfig(10, 0.1F, 1)));
+		}
+		
+	}
+	
+	
 	
 	/**
 	 * @param stateIn The block to generate
@@ -37,7 +65,7 @@ public class RegisterInit {
 		ForgeRegistries.BIOMES.forEach(biome->biome.addFeature(
 				GenerationStage.Decoration.UNDERGROUND_ORES, 
 			    Biome.createCompositeFeature(
-			    		Feature.MINABLE, 
+			    		Feature.MINABLE,
 				        new MinableConfig(MinableConfig.IS_ROCK,stateIn, sizeIn), 
 				        Biome.COUNT_RANGE, 
 				        // countInChunk minHeight maxHeightBase maxHeight

@@ -24,10 +24,10 @@ public class EntityEvilZombie extends EntityZombie{
 		Entity entity = cause.getTrueSource();
 		if(entity instanceof EntityPlayer) {
 			ItemStack stack=((EntityPlayer)entity).getHeldItemMainhand();
-			if(stack.getItem()==ItemList.item_jade_sword && this.rand.nextInt(10)<1) {
-				this.entityDropItem(new ItemStack(ItemList.item_jade_primary, 1));
-			}else if(stack.getItem()==ItemList.item_peach_wood_sword) {
-				this.entityDropItem(new ItemStack(ItemList.item_jade_primary, 1));
+			if(stack.getItem()==ItemList.ITEM_JADE_SWORD && this.rand.nextInt(10)<1) {
+				this.entityDropItem(new ItemStack(ItemList.ITEM_JADE_PRIMARY, 1));
+			}else if(stack.getItem()==ItemList.ITEM_PEACH_WOOD_SWORD) {
+				this.entityDropItem(new ItemStack(ItemList.ITEM_JADE_PRIMARY, 1));
 			}
 			
 		}

@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 
 public enum ToolMaterial implements IItemTier {
-	jade(4, 2000, 12.0F, 4.0F, 10, (Item)ItemList.item_jade_primary);
+	jade(4, 2000, 12.0F, 4.0F, 10, (Item)ItemList.ITEM_JADE_PRIMARY);
 	private float attackDamage, efficiency;
 	private int maxUses, harvestLevel, enchantability;
 	private Item repairMaterial;

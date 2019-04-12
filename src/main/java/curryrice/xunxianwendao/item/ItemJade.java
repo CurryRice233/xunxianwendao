@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
 public class ItemJade extends Item {
-	public ItemJade(int level) {
+	public ItemJade(int meta) {
 		super(new Item.Properties().group(CreativeTabs.MAIN));
-		switch(level) {
+		switch(meta) {
 		case 1:
 			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_jade_intermediate"));break;
 		case 2:

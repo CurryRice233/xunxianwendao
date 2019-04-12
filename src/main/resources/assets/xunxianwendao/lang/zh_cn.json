@@ -4,12 +4,25 @@
 	"item.xunxianwendao.item_jade_advanced": "高级玉石",
 	"item.xunxianwendao.item_cinnabar": "朱砂",
 	
+	"item.xunxianwendao.item_talisman_empaty":"空白符",
+	"item.xunxianwendao.item_talisman_unmove":"定身符",
+	"item.xunxianwendao.item_talisman_burding":"火焰符",
+	"item.xunxianwendao.item_talisman_explosion":"爆炸符",
+	"item.xunxianwendao.item_talisman_thunder":"雷电符",
+	"item.xunxianwendao.item_talisman_nausea":"反胃符",
+	"item.xunxianwendao.item_talisman_teleport":"传送符",
+	"talisman.xunxianwendao.quality":"品质: ",
+	
 	"item.xunxianwendao.item_jade_pickaxe": "玉石稿",
 	"item.xunxianwendao.item_jade_sword": "玉石剑",
 	"item.xunxianwendao.item_peach_wood_sword": "桃木剑",
 	
 	"block.xunxianwendao.jade_ore": "玉石矿",
 	"block.xunxianwendao.cinnabar_ore": "朱砂矿",
+	"block.xunxianwendao.peach_log": "桃木",
+	"block.xunxianwendao.peach_leaf": "桃树叶",
+	"block.xunxianwendao.peach_sapling": "桃树苗",
+	
 	
 	"entity.xunxianwendao.entity_evil_zombie": "恶灵僵尸",
 	

@@ -4,12 +4,23 @@
 	"item.xunxianwendao.item_jade_advanced": "Advanced Jade",
 	"item.xunxianwendao.item_cinnabar": "Cinnabar",
 	
+	"item.xunxianwendao.item_talisman_empaty":"Empaty Talisman",
+	"item.xunxianwendao.item_talisman_unmove":"Unmove Talisman",
+	"item.xunxianwendao.item_talisman_burding":"Burding Talisman",
+	"item.xunxianwendao.item_talisman_explosion":"Explosion Talisman",
+	"item.xunxianwendao.item_talisman_thunder":"Thunder Talisman",
+	"item.xunxianwendao.item_talisman_nausea":"Nausea Talisman",
+	"item.xunxianwendao.item_talisman_teleport":"Teleport Talisman",
+	
 	"item.xunxianwendao.item_jade_pickaxe": "Jade Pickaxe",
 	"item.xunxianwendao.item_jade_sword": "Jade Sword",
 	"item.xunxianwendao.item_peach_wood_sword": "Peach Wood Sword",
 	
 	"block.xunxianwendao.jade_ore": "Jade Ore",
 	"block.xunxianwendao.cinnabar_ore": "Cinnabar Ore",
+	"block.xunxianwendao.peach_log": "Peach Log",
+	"block.xunxianwendao.peach_leaf": "Peach Leaf",
+	"block.xunxianwendao.peach_sapling": "Peach Sapling",
 	
 	"entity.xunxianwendao.entity_evil_zombie": "Evil Zombie",
 	

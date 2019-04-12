@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "xunxianwendao:block/peach_log_top",
+        "side": "xunxianwendao:block/peach_log"
+    }
+}

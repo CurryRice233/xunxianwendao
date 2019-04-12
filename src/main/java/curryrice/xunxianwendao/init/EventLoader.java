@@ -1,5 +1,6 @@
 package curryrice.xunxianwendao.init;
 
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,7 +20,7 @@ public class EventLoader {
 	@SubscribeEvent
 	public void onEntityJoinWorld(EntityJoinWorldEvent event) {
 		if(!event.getWorld().isRemote && event.getEntity() instanceof EntityPlayer) {
-			((EntityPlayer)(event.getEntity())).sendStatusMessage(new TextComponentString("Join World"), true);
+			//((EntityPlayer)(event.getEntity())).sendStatusMessage(new TextComponentString("Join World"), true);
 		}
 	}
 

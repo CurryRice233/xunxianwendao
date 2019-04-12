@@ -1,7 +1,7 @@
 package curryrice.xunxianwendao.network;
 
 import net.minecraft.util.ResourceLocation;
-
+import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
 

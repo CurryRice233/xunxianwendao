@@ -19,7 +19,7 @@ public class BlockJadeOre extends Block{
 	@Override
 	public IItemProvider getItemDropped(IBlockState state, World worldIn, BlockPos pos, int fortune) {
 		if(fortune>0 && worldIn.rand.nextInt(10)<fortune)
-			return ItemList.item_jade_intermediate;
-		return ItemList.item_jade_primary;
+			return ItemList.ITEM_JADE_INTERMEDIATE;
+		return ItemList.ITEM_JADE_PRIMARY;
 	}
 }

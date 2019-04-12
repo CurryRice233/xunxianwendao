@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import curryrice.xunxianwendao.block.*;
 import curryrice.xunxianwendao.entity.EntityList;
+import curryrice.xunxianwendao.entity.item.EntityTalisman;
 import curryrice.xunxianwendao.entity.monster.EntityEvilZombie;
 import curryrice.xunxianwendao.init.CreativeTabs;
 import curryrice.xunxianwendao.init.EventLoader;
@@ -49,6 +50,7 @@ public class XunXianWenDao {
 	private void setup(final FMLCommonSetupEvent event)
 	{
 		RegisterInit.registerOre();
+		RegisterInit.registerFeature();
 		new EventLoader();
 		logger.info("Setup method registered.");
 	}
@@ -68,17 +70,31 @@ public class XunXianWenDao {
 			event.getRegistry().registerAll
 			(
 				// Items
-				ItemList.item_jade_primary=new ItemJade(0),
-				ItemList.item_jade_intermediate=new ItemJade(1),
-				ItemList.item_jade_advanced=new ItemJade(2),
-				ItemList.item_jade_pickaxe=new ItemJadePickaxe(),
-				ItemList.item_jade_sword=new ItemJadeSword(),
-				ItemList.item_peach_wood_sword=new ItemPeachWoodSword(),
-				ItemList.item_cinnabar=new Item(new Item.Properties().group(CreativeTabs.MAIN)).setRegistryName(location("item_cinnabar")),
+				ItemList.ITEM_JADE_PRIMARY=new ItemJade(0),
+				ItemList.ITEM_JADE_INTERMEDIATE=new ItemJade(1),
+				ItemList.ITEM_JADE_ADVANCED=new ItemJade(2),
+				ItemList.ITEM_CINNABAR=new Item(new Item.Properties().group(CreativeTabs.MAIN)).setRegistryName(location("item_cinnabar")),
+				
+				ItemList.ITEM_TALISMAN_EMPATY=new ItemTalisman(0, "empaty"),
+				ItemList.ITEM_TALISMAN_UNMOVE=new ItemTalisman(1, "unmove"),
+				ItemList.ITEM_TALISMAN_BURDING=new ItemTalisman(2, "burding"),
+				ItemList.ITEM_TALISMAN_EXPLOSION=new ItemTalisman(3, "explosion"),
+				ItemList.ITEM_TALISMAN_THUNDER=new ItemTalisman(4, "thunder"),
+				ItemList.ITEM_TALISMAN_NAUSEA=new ItemTalisman(5, "nausea"),
+				ItemList.ITEM_TALISMAN_TELEPORT=new ItemTalisman(6, "teleport"),
+				
+				ItemList.ITEM_JADE_PICKAXE=new ItemJadePickaxe(),
+				ItemList.ITEM_JADE_SWORD=new ItemJadeSword(),
+				ItemList.ITEM_PEACH_WOOD_SWORD=new ItemPeachWoodSword(),
+				
+				
 				
 				// Blocks
-				ItemList.jade_ore_item = registerBlockItem(BlockList.jade_ore,CreativeTabs.MAIN),
-				ItemList.cinnabar_ore_item = registerBlockItem(BlockList.cinnabar_ore,CreativeTabs.MAIN)
+				ItemList.JADE_ORE_ITEM = registerBlockItem(BlockList.JADE_ORE,CreativeTabs.MAIN),
+				ItemList.CINNABAR_ORE_ITEM = registerBlockItem(BlockList.CINNABAR_ORE,CreativeTabs.MAIN),
+				ItemList.PEACH_LOG_ITEM=registerBlockItem(BlockList.PEACH_LOG, CreativeTabs.MAIN),
+				ItemList.PEACH_LEAF_ITEM=registerBlockItem(BlockList.PEACH_LEAF, CreativeTabs.MAIN),
+				ItemList.PEACH_SAPLING_ITEM=registerBlockItem(BlockList.PEACH_SAPLING, CreativeTabs.MAIN)
 			);
 			
 			logger.info("Items registered.");
@@ -89,8 +105,12 @@ public class XunXianWenDao {
 		{
 			event.getRegistry().registerAll
 			(
-				BlockList.jade_ore=new BlockJadeOre(),
-				BlockList.cinnabar_ore=new Block(Block.Properties.create(Material.ROCK)).setRegistryName(location("cinnabar_ore"))
+				BlockList.JADE_ORE=new BlockJadeOre(),
+				BlockList.CINNABAR_ORE=new Block(Block.Properties.create(Material.ROCK)).setRegistryName(location("cinnabar_ore")),
+				
+				BlockList.PEACH_LOG=new BlockPeachLog(),
+				BlockList.PEACH_LEAF=new BlockPeachLeaf(),
+				BlockList.PEACH_SAPLING=new BlockPeachSapling()
 			);
 			
 			logger.info("Blocks registered.");
@@ -99,7 +119,8 @@ public class XunXianWenDao {
 		@SubscribeEvent
 		public static void registerEntityType(final RegistryEvent.Register<EntityType<?>> event) {
 			event.getRegistry().registerAll(
-				EntityList.entity_evil_zombie=registerEntityType("entity_evil_zombie", EntityEvilZombie.class, EntityEvilZombie::new, 32, 3, true)
+				EntityList.entity_evil_zombie=registerEntityType("entity_evil_zombie", EntityEvilZombie.class, EntityEvilZombie::new, 32, 3, true),
+				EntityList.entity_talisman=registerEntityType("entity_talisman",EntityTalisman.class, EntityTalisman::new,64,1,true)
 			);
 		}
 		
