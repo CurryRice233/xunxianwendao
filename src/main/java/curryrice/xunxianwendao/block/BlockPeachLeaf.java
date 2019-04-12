@@ -9,7 +9,6 @@ import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
@@ -29,8 +28,14 @@ public class BlockPeachLeaf extends BlockLeaves{
 	
 	@Override
 	public void randomTick(IBlockState state, World worldIn, BlockPos pos, Random random) {
-		if(random.nextInt(100)==0 && worldIn.isAirBlock(pos.down())) {
-			spawnAsEntity(worldIn,pos.down(),new ItemStack(Items.APPLE));// will change to peach
+		if(worldIn.isAirBlock(pos.down()) && random.nextInt(100)==0) {
+			int i = random.nextInt(1000);
+			if(i<100)
+				spawnAsEntity(worldIn,pos.down(),new ItemStack(ItemList.ITEM_PEACH));
+			else if(i>=100 && i<110)
+				spawnAsEntity(worldIn,pos.down(),new ItemStack(ItemList.ITEM_PEACH_CENTURY));
+			else if(i==999)
+				spawnAsEntity(worldIn,pos.down(),new ItemStack(ItemList.ITEM_PEACH_MILLENNIUM));
 		}
 	}
 	

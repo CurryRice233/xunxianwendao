@@ -74,6 +74,9 @@ public class XunXianWenDao {
 				ItemList.ITEM_JADE_INTERMEDIATE=new ItemJade(1),
 				ItemList.ITEM_JADE_ADVANCED=new ItemJade(2),
 				ItemList.ITEM_CINNABAR=new Item(new Item.Properties().group(CreativeTabs.MAIN)).setRegistryName(location("item_cinnabar")),
+				ItemList.ITEM_PEACH=new ItemPeach(0),
+				ItemList.ITEM_PEACH_CENTURY=new ItemPeach(1),
+				ItemList.ITEM_PEACH_MILLENNIUM=new ItemPeach(2),
 				
 				ItemList.ITEM_TALISMAN_EMPATY=new ItemTalisman(0, "empaty"),
 				ItemList.ITEM_TALISMAN_UNMOVE=new ItemTalisman(1, "unmove"),

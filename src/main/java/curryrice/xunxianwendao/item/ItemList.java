@@ -7,6 +7,10 @@ public class ItemList {
 	public static ItemJade ITEM_JADE_INTERMEDIATE;
 	public static ItemJade ITEM_JADE_ADVANCED;
 	
+	public static ItemPeach ITEM_PEACH;
+	public static ItemPeach ITEM_PEACH_CENTURY;
+	public static ItemPeach ITEM_PEACH_MILLENNIUM;
+	
 	public static ItemTalisman ITEM_TALISMAN_EMPATY;
 	public static ItemTalisman ITEM_TALISMAN_UNMOVE;
 	public static ItemTalisman ITEM_TALISMAN_BURDING;
