@@ -5,7 +5,7 @@ import curryrice.xunxianwendao.client.entity.render.RenderEvilZombie;
 import curryrice.xunxianwendao.client.entity.render.RenderTalisman;
 import curryrice.xunxianwendao.entity.item.EntityTalisman;
 import curryrice.xunxianwendao.entity.monster.EntityEvilZombie;
-import curryrice.xunxianwendao.world.gen.PeachTreeFeature;
+import curryrice.xunxianwendao.world.gen.FeatureList;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.init.Biomes;
@@ -15,7 +15,9 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.MinableConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
+import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -45,9 +47,13 @@ public class RegisterInit {
 				Biomes.DARK_FOREST_HILLS,Biomes.FLOWER_FOREST};
 		for(Biome b:biomes) {
 			b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-					Biome.createCompositeFeature(new PeachTreeFeature(true), IFeatureConfig.NO_FEATURE_CONFIG, Biome.AT_SURFACE_WITH_EXTRA, 
+					Biome.createCompositeFeature(FeatureList.PEACH_TREE_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.AT_SURFACE_WITH_EXTRA, 
 							new AtSurfaceWithExtraConfig(10, 0.1F, 1)));
 		}
+		
+		// 4962944354647146466
+		Biomes.FLOWER_FOREST.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Biome.createCompositeFeature(FeatureList.SUZAKU_ORICHD_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.TWICE_SURFACE, new FrequencyConfig(5)));
 		
 	}
 	

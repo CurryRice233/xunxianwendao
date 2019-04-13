@@ -6,6 +6,7 @@
 	"item.xunxianwendao.item_peach": "蟠桃",
 	"item.xunxianwendao.item_peach_century": "百年蟠桃",
 	"item.xunxianwendao.item_peach_millennium": "千年蟠桃",
+
 	
 	"item.xunxianwendao.item_talisman_empaty":"空白符",
 	"item.xunxianwendao.item_talisman_unmove":"定身符",
@@ -25,7 +26,7 @@
 	"block.xunxianwendao.peach_log": "桃木",
 	"block.xunxianwendao.peach_leaf": "桃树叶",
 	"block.xunxianwendao.peach_sapling": "桃树苗",
-	
+	"block.xunxianwendao.suzaku_orichd": "朱雀兰",
 	
 	"entity.xunxianwendao.entity_evil_zombie": "恶灵僵尸",
 	

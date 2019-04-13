@@ -22,4 +22,5 @@ public class BlockJadeOre extends Block{
 			return ItemList.ITEM_JADE_INTERMEDIATE;
 		return ItemList.ITEM_JADE_PRIMARY;
 	}
+	
 }

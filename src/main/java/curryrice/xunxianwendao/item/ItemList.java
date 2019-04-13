@@ -31,4 +31,5 @@ public class ItemList {
 	public static Item PEACH_LOG_ITEM;
 	public static Item PEACH_LEAF_ITEM;
 	public static Item PEACH_SAPLING_ITEM;
+	public static Item SUZAKU_ORICHD_ITEM;
 }

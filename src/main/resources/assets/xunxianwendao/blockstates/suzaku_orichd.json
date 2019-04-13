@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=1": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=2": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=3": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=4": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=5": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=6": { "model": "xunxianwendao:block/suzaku_orichd" },
+		"age=7": { "model": "xunxianwendao:block/suzaku_orichd_grew" }
+    }
+}

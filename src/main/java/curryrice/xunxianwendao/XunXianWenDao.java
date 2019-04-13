@@ -14,7 +14,6 @@ import curryrice.xunxianwendao.init.EventLoader;
 import curryrice.xunxianwendao.init.RegisterInit;
 import curryrice.xunxianwendao.item.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -97,7 +96,8 @@ public class XunXianWenDao {
 				ItemList.CINNABAR_ORE_ITEM = registerBlockItem(BlockList.CINNABAR_ORE,CreativeTabs.MAIN),
 				ItemList.PEACH_LOG_ITEM=registerBlockItem(BlockList.PEACH_LOG, CreativeTabs.MAIN),
 				ItemList.PEACH_LEAF_ITEM=registerBlockItem(BlockList.PEACH_LEAF, CreativeTabs.MAIN),
-				ItemList.PEACH_SAPLING_ITEM=registerBlockItem(BlockList.PEACH_SAPLING, CreativeTabs.MAIN)
+				ItemList.PEACH_SAPLING_ITEM=registerBlockItem(BlockList.PEACH_SAPLING, CreativeTabs.MAIN),
+				ItemList.SUZAKU_ORICHD_ITEM=registerBlockItem(BlockList.SUZAKU_ORICHD, CreativeTabs.MAIN)
 			);
 			
 			logger.info("Items registered.");
@@ -109,11 +109,13 @@ public class XunXianWenDao {
 			event.getRegistry().registerAll
 			(
 				BlockList.JADE_ORE=new BlockJadeOre(),
-				BlockList.CINNABAR_ORE=new Block(Block.Properties.create(Material.ROCK)).setRegistryName(location("cinnabar_ore")),
+				BlockList.CINNABAR_ORE=new BlockCinnabarOre(),
 				
 				BlockList.PEACH_LOG=new BlockPeachLog(),
 				BlockList.PEACH_LEAF=new BlockPeachLeaf(),
-				BlockList.PEACH_SAPLING=new BlockPeachSapling()
+				BlockList.PEACH_SAPLING=new BlockPeachSapling(),
+				
+				BlockList.SUZAKU_ORICHD=new BlockSuzakuOrichd()
 			);
 			
 			logger.info("Blocks registered.");

@@ -9,4 +9,6 @@ public class BlockList {
 	public static BlockPeachLog PEACH_LOG;
 	public static BlockPeachLeaf PEACH_LEAF;
 	public static BlockPeachSapling PEACH_SAPLING;
+	
+	public static BlockSuzakuOrichd SUZAKU_ORICHD;
 }
