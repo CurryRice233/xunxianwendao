@@ -13,18 +13,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class BlockJadeOre extends Block{
-	public BlockJadeOre() {
-		super(Block.Properties.create(Material.ROCK).hardnessAndResistance(10,10));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "jade_ore"));
+public class BlockLiangYiStone extends Block{
+
+	public BlockLiangYiStone() {
+		super(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid,"liangyi_stone"));
 	}
 	
 	@Override
 	public IItemProvider getItemDropped(IBlockState state, World worldIn, BlockPos pos, int fortune) {
-		if(fortune>0 && worldIn.rand.nextInt(10)<fortune)
-			return ItemList.ITEM_JADE_INTERMEDIATE;
-		return ItemList.ITEM_JADE_PRIMARY;
+		if(worldIn.rand.nextBoolean())
+			return ItemList.ITEM_LIANGYI_STONE_YING;
+		return ItemList.ITEM_LIANGYI_STONE_YANG;
 	}
+	
 	@Override
 	public int getHarvestLevel(IBlockState state) {
 		return 4;
@@ -35,4 +37,5 @@ public class BlockJadeOre extends Block{
 	public ToolType getHarvestTool(IBlockState state) {
 		return ToolType.AXE;
 	}
+
 }

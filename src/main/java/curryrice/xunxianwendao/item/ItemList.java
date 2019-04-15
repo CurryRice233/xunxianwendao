@@ -6,6 +6,9 @@ public class ItemList {
 	public static ItemJade ITEM_JADE_PRIMARY;
 	public static ItemJade ITEM_JADE_INTERMEDIATE;
 	public static ItemJade ITEM_JADE_ADVANCED;
+	public static Item ITEM_CINNABAR;
+	public static Item ITEM_LIANGYI_STONE_YING;
+	public static Item ITEM_LIANGYI_STONE_YANG;
 	
 	public static ItemPeach ITEM_PEACH;
 	public static ItemPeach ITEM_PEACH_CENTURY;
@@ -23,7 +26,9 @@ public class ItemList {
 	public static ItemJadeSword ITEM_JADE_SWORD;
 	public static ItemPeachWoodSword ITEM_PEACH_WOOD_SWORD;
 	
-	public static Item ITEM_CINNABAR;
+	
+	
+	public static Item EVIL_ZOMBIE_SPAWN_EGG;
 	
 	//Block Item
 	public static Item JADE_ORE_ITEM;
@@ -32,4 +37,5 @@ public class ItemList {
 	public static Item PEACH_LEAF_ITEM;
 	public static Item PEACH_SAPLING_ITEM;
 	public static Item SUZAKU_ORICHD_ITEM;
+	public static Item LIANGYI_STONE_ITEM;
 }

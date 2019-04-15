@@ -3,6 +3,9 @@
 	"item.xunxianwendao.item_jade_intermediate": "中级玉石",
 	"item.xunxianwendao.item_jade_advanced": "高级玉石",
 	"item.xunxianwendao.item_cinnabar": "朱砂",
+	"item.xunxianwendao.item_liangyi_stone_ying": "两仪石·阴",
+	"item.xunxianwendao.item_liangyi_stone_yang": "两仪石·阳",
+	
 	"item.xunxianwendao.item_peach": "蟠桃",
 	"item.xunxianwendao.item_peach_century": "百年蟠桃",
 	"item.xunxianwendao.item_peach_millennium": "千年蟠桃",
@@ -23,6 +26,7 @@
 	
 	"block.xunxianwendao.jade_ore": "玉石矿",
 	"block.xunxianwendao.cinnabar_ore": "朱砂矿",
+	"block.xunxianwendao.liangyi_stone": "两仪石",
 	"block.xunxianwendao.peach_log": "桃木",
 	"block.xunxianwendao.peach_leaf": "桃树叶",
 	"block.xunxianwendao.peach_sapling": "桃树苗",
@@ -32,6 +36,27 @@
 	
 	"advancement.xunxianwendao.root.title":"玄幻世界",
 	"advancement.xunxianwendao.root.description":"踏上另一条与众不同的路",
+	
+	"level.xunxianwendao.level.name":"道行",
+	"level.xunxianwendao.level0":"凡人(0)",
+	"level.xunxianwendao.level1":"炼气(1)",
+	"level.xunxianwendao.level2":"筑基(2)",
+	"level.xunxianwendao.level3":"辟谷(3)",
+	"level.xunxianwendao.level4":"金丹(4)",
+	"level.xunxianwendao.level5":"元婴(5)",
+	"level.xunxianwendao.level6":"出窍(6)",
+	"level.xunxianwendao.level7":"分神(7)",
+	"level.xunxianwendao.level8":"合体(8)",
+	"level.xunxianwendao.level9":"渡劫(9)",
+	"level.xunxianwendao.level10":"大乘(10)",
+	
+	"level.xunxianwendao.pharmacistLevel.name":"药师等级",
+	"level.xunxianwendao.pharmacistLevel0":"一窍不通(0)",
+	"level.xunxianwendao.pharmacistLevel1":"略知一二(1)",
+	"level.xunxianwendao.pharmacistLevel2":"精益求精(2)",
+	"level.xunxianwendao.pharmacistLevel3":"融会贯通(3)",
+	"level.xunxianwendao.pharmacistLevel4":"出口成章(4)",
+	"level.xunxianwendao.pharmacistLevel5":"满腹经纶(5)",
 	
 	"itemGroup.xunxianwendao_main": "寻仙问道"
 }

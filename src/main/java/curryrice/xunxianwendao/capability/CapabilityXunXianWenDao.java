@@ -2,38 +2,38 @@ package curryrice.xunxianwendao.capability;
 
 import java.util.concurrent.Callable;
 
+import curryrice.xunxianwendao.XunXianWenDao;
 import net.minecraft.nbt.INBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.Capability.IStorage;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.common.util.LazyOptional;
 
 public class CapabilityXunXianWenDao {
 	public static class ProviderPlayer implements ICapabilitySerializable<NBTTagCompound>{
-		private ICapabilityXunXianWenDao capability = new CapabilityXunXianWenDaoImp();
-		private IStorage<ICapabilityXunXianWenDao> storage = CapabilityLoader.xunxianwendaoCapability.getStorage();
-		
+		public static final ResourceLocation NAME = new ResourceLocation(XunXianWenDao.modid, "xunxianwendao_level");
+		private ICapabilityXunXianWenDao impl = new CapabilityXunXianWenDaoImp();
+		private LazyOptional<ICapabilityXunXianWenDao> cap = LazyOptional.of(() -> impl);
+
 		@Override
 		@SuppressWarnings("unchecked")
-		public <T> LazyOptional<T> getCapability(Capability<T> cap, EnumFacing side) {
-			if(CapabilityLoader.xunxianwendaoCapability.equals(cap)) {
-				return (LazyOptional<T>) capability;
+		public <T> LazyOptional<T> getCapability(Capability<T> capability, EnumFacing side) {
+			if(capability == CapabilityLoader.xunxianwendaoCapability) {
+				return cap.cast();
 			}
-			return null;
+			return LazyOptional.empty();
 		}
 
 		@Override
 		public NBTTagCompound serializeNBT() {
-			NBTTagCompound compound = new NBTTagCompound();
-			compound.setTag("xunxianwendao", storage.writeNBT(CapabilityLoader.xunxianwendaoCapability, capability, null));
-			return compound;
+			return impl.serializeNBT();
 		}
 
 		@Override
 		public void deserializeNBT(NBTTagCompound nbt) {
-			storage.readNBT(CapabilityLoader.xunxianwendaoCapability, capability, null, nbt.getTag("xunxianwendao"));
+			impl.deserializeNBT(nbt);
 		}
 		
 	}
@@ -43,17 +43,13 @@ public class CapabilityXunXianWenDao {
 		@Override
 		public INBTBase writeNBT(Capability<ICapabilityXunXianWenDao> capability, ICapabilityXunXianWenDao instance,
 				EnumFacing side) {
-			NBTTagCompound compound = new NBTTagCompound();
-			compound.setFloat("maxHealth", instance.getMaxHealth());
-			return null;
+			return instance.serializeNBT();
 		}
 
 		@Override
 		public void readNBT(Capability<ICapabilityXunXianWenDao> capability, ICapabilityXunXianWenDao instance,
 				EnumFacing side, INBTBase nbt) {
-			NBTTagCompound compound= (NBTTagCompound)nbt;
-			instance.setMaxHealth(compound.getFloat("maxHealth"));
-			
+			instance.deserializeNBT((NBTTagCompound)nbt);
 		}
 		
 	}

@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 public class BlockList {
 	public static BlockJadeOre JADE_ORE;
 	public static Block CINNABAR_ORE;
+	public static BlockLiangYiStone LIANGYI_STONE;
 	
 	public static BlockPeachLog PEACH_LOG;
 	public static BlockPeachLeaf PEACH_LEAF;

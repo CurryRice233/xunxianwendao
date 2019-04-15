@@ -2,6 +2,8 @@ package curryrice.xunxianwendao;
 
 import java.util.function.Function;
 
+import curryrice.xunxianwendao.capability.CapabilityLoader;
+import curryrice.xunxianwendao.network.NetworkLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -50,7 +52,10 @@ public class XunXianWenDao {
 	{
 		RegisterInit.registerOre();
 		RegisterInit.registerFeature();
+		RegisterInit.registerSpawn();
+		new CapabilityLoader();
 		new EventLoader();
+		NetworkLoader.register();
 		logger.info("Setup method registered.");
 	}
 	
@@ -72,7 +77,10 @@ public class XunXianWenDao {
 				ItemList.ITEM_JADE_PRIMARY=new ItemJade(0),
 				ItemList.ITEM_JADE_INTERMEDIATE=new ItemJade(1),
 				ItemList.ITEM_JADE_ADVANCED=new ItemJade(2),
-				ItemList.ITEM_CINNABAR=new Item(new Item.Properties().group(CreativeTabs.MAIN)).setRegistryName(location("item_cinnabar")),
+				ItemList.ITEM_CINNABAR=createItem("item_cinnabar"),
+				ItemList.ITEM_LIANGYI_STONE_YING=createItem("item_liangyi_stone_ying"),
+				ItemList.ITEM_LIANGYI_STONE_YANG=createItem("item_liangyi_stone_yang"),
+				
 				ItemList.ITEM_PEACH=new ItemPeach(0),
 				ItemList.ITEM_PEACH_CENTURY=new ItemPeach(1),
 				ItemList.ITEM_PEACH_MILLENNIUM=new ItemPeach(2),
@@ -89,15 +97,16 @@ public class XunXianWenDao {
 				ItemList.ITEM_JADE_SWORD=new ItemJadeSword(),
 				ItemList.ITEM_PEACH_WOOD_SWORD=new ItemPeachWoodSword(),
 				
-				
-				
 				// Blocks
 				ItemList.JADE_ORE_ITEM = registerBlockItem(BlockList.JADE_ORE,CreativeTabs.MAIN),
 				ItemList.CINNABAR_ORE_ITEM = registerBlockItem(BlockList.CINNABAR_ORE,CreativeTabs.MAIN),
+				ItemList.LIANGYI_STONE_ITEM=registerBlockItem(BlockList.LIANGYI_STONE, CreativeTabs.MAIN),
+						
 				ItemList.PEACH_LOG_ITEM=registerBlockItem(BlockList.PEACH_LOG, CreativeTabs.MAIN),
 				ItemList.PEACH_LEAF_ITEM=registerBlockItem(BlockList.PEACH_LEAF, CreativeTabs.MAIN),
 				ItemList.PEACH_SAPLING_ITEM=registerBlockItem(BlockList.PEACH_SAPLING, CreativeTabs.MAIN),
 				ItemList.SUZAKU_ORICHD_ITEM=registerBlockItem(BlockList.SUZAKU_ORICHD, CreativeTabs.MAIN)
+				
 			);
 			
 			logger.info("Items registered.");
@@ -110,6 +119,7 @@ public class XunXianWenDao {
 			(
 				BlockList.JADE_ORE=new BlockJadeOre(),
 				BlockList.CINNABAR_ORE=new BlockCinnabarOre(),
+				BlockList.LIANGYI_STONE=new BlockLiangYiStone(),
 				
 				BlockList.PEACH_LOG=new BlockPeachLog(),
 				BlockList.PEACH_LEAF=new BlockPeachLeaf(),
@@ -143,6 +153,9 @@ public class XunXianWenDao {
 		private static ResourceLocation location(String name) {
 			return new ResourceLocation(XunXianWenDao.modid, name);
 		}
+		private static Item createItem(String name){
+			return new Item(new Item.Properties().group(CreativeTabs.MAIN)).setRegistryName(location(name));
+		} 
 	}
 	
 }
