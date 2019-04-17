@@ -26,14 +26,20 @@ public class ItemPeach extends ItemFood{
 		}
 		
 	}
-	
+
+	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
 		if(!worldIn.isRemote) {
 			player.getCapability(CapabilityLoader.xunxianwendaoCapability).ifPresent(cap ->{
-				if(this==ItemList.ITEM_PEACH)
-					cap.setMaxHealth(cap.getMaxHealth()+1);
-				else 
-					cap.setMaxHealth(cap.getMaxHealth()-1);
+				if(this==ItemList.ITEM_PEACH) {
+					cap.setMaxHealth(cap.getMaxHealth() + 1);
+					cap.setLevel(cap.getLevel()+1);
+					cap.addMagic(50F);
+				}else {
+					cap.setMaxHealth(cap.getMaxHealth() - 1);
+					cap.setLevel(cap.getLevel()-1);
+					cap.addMagic(-50F);
+				}
 				cap.sync((EntityPlayerMP)player);
 			});
 		}
