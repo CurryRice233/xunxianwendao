@@ -19,7 +19,7 @@ public class SuzakuOrichdFeature extends Feature<NoFeatureConfig> {
 		int i = 0;
 		IBlockState iblockstate = BlockList.SUZAKU_ORICHD.getDefaultState();
 
-		for (int j = 0; j < 64; ++j) {
+		for (int j = 0; j < 16; ++j) {
 			BlockPos blockpos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4),rand.nextInt(8) - rand.nextInt(8));
 			if (world.isAirBlock(blockpos) && world.getBlockState(blockpos.down()).getBlock() == Blocks.GRASS_BLOCK) {
 				world.setBlockState(blockpos, iblockstate, 2);

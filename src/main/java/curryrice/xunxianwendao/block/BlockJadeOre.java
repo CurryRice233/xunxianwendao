@@ -16,7 +16,7 @@ import net.minecraftforge.common.ToolType;
 public class BlockJadeOre extends Block{
 	public BlockJadeOre() {
 		super(Block.Properties.create(Material.ROCK).hardnessAndResistance(10,10));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "jade_ore"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "jade_ore"));
 	}
 	
 	@Override

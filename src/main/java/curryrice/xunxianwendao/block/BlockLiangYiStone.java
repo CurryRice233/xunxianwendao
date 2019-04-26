@@ -17,7 +17,7 @@ public class BlockLiangYiStone extends Block{
 
 	public BlockLiangYiStone() {
 		super(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid,"liangyi_stone"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID,"liangyi_stone"));
 	}
 	
 	@Override

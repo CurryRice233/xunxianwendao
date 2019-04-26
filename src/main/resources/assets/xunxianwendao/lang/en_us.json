@@ -30,7 +30,13 @@
 	"block.xunxianwendao.peach_leaf": "Peach Leaf",
 	"block.xunxianwendao.peach_sapling": "Peach Sapling",
 	"block.xunxianwendao.suzaku_orichd": "Suzaku Orichd",
-	
+	"block.xunxianwendao.ice_grass": "Ice Grass",
+	"block.xunxianwendao.thunder_wood": "Thunder Wood",
+	"block.xunxianwendao.purple_heart_grass": "Purple Heart Grass",
+	"block.xunxianwendao.gold_grass": "Gold Grass",
+
+	"block.xunxianwendao.cauldron_furnace": "Cauldron Furnace",
+
 	"entity.xunxianwendao.entity_evil_zombie": "Evil Zombie",
 	
 	"itemGroup.xunxianwendao_main": "Xun Xian Wen Dao"

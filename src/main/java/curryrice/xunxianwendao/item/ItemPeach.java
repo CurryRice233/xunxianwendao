@@ -16,13 +16,13 @@ public class ItemPeach extends ItemFood{
 		this.setAlwaysEdible();
 		switch(meta) {
 		case 1:
-			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_peach_century"));
+			this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_peach_century"));
 			break;
 		case 2:
-			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_peach_millennium"));
+			this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_peach_millennium"));
 			break;
 		default:
-			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_peach"));
+			this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_peach"));
 		}
 		
 	}

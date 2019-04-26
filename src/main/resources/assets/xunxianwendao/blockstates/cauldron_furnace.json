@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "xunxianwendao:block/cauldron_furnace" },
+    "lit=true": { "model": "xunxianwendao:block/cauldron_furnace_burning" }
+  }
+}

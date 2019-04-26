@@ -32,7 +32,7 @@ public class ItemTalisman extends Item{
 	public ItemTalisman(int meta,String name) {
 		super(new Item.Properties().group(CreativeTabs.MAIN));
 		this.meta=meta;	
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_talisman_"+name));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_talisman_"+name));
 	}
 	
 	public int getMeta() {

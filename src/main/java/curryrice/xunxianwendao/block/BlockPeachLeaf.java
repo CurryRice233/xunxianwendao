@@ -19,7 +19,7 @@ public class BlockPeachLeaf extends BlockLeaves{
 
 	public BlockPeachLeaf() {
 		super(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).sound(SoundType.PLANT));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "peach_leaf"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "peach_leaf"));
 	}
 	@Override
 	public IItemProvider getItemDropped(IBlockState state, World worldIn, BlockPos pos, int fortune) {

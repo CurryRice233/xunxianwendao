@@ -12,7 +12,7 @@ public class BlockPeachSapling extends BlockSapling{
 
 	public BlockPeachSapling() {
 		super(new PeachTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().hardnessAndResistance(0.0F).sound(SoundType.PLANT));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "peach_sapling"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "peach_sapling"));
 	}
 
 }

@@ -12,4 +12,10 @@ public class BlockList {
 	public static BlockPeachSapling PEACH_SAPLING;
 	
 	public static BlockSuzakuOrichd SUZAKU_ORICHD;
+	public static BlockIceGrass ICE_GRASS;
+	public static BlockThunderWood THUNDER_WOOD;
+	public static BlockPurpleHeartGrass PURPLR_HEART_GRASS;
+	public static BlockGoldGrass GOLD_GRASS;
+
+	public static BlockCauldronFurnace CAULDRON_FURNACE;
 }

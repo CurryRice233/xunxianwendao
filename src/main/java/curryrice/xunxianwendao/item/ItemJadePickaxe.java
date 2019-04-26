@@ -14,7 +14,7 @@ import net.minecraft.util.ResourceLocation;
 public class ItemJadePickaxe extends ItemPickaxe {
 	public ItemJadePickaxe() {
 		super(ToolMaterial.jade, 2, -1.0F, (new Item.Properties()).group(CreativeTabs.MAIN));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid,"item_jade_pickaxe"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID,"item_jade_pickaxe"));
 	}
 	@Override
 	public int getHarvestLevel(ItemStack stack, net.minecraftforge.common.ToolType tool, @Nullable EntityPlayer player, @Nullable IBlockState blockState) {

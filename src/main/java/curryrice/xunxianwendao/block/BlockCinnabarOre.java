@@ -13,7 +13,7 @@ public class BlockCinnabarOre extends Block{
 
 	public BlockCinnabarOre() {
 		super(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid,"cinnabar_ore"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID,"cinnabar_ore"));
 	}
 	@Override
 	public int getHarvestLevel(IBlockState state) {

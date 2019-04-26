@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "xunxianwendao:block/thunder_wood"
+  }
+}

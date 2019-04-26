@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "xunxianwendao:block/purple_heart_grass"
+  }
+}

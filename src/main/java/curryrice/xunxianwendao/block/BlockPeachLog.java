@@ -12,7 +12,7 @@ public class BlockPeachLog extends BlockLog{
 
 	public BlockPeachLog() {
 		super(MaterialColor.WOOD, Block.Properties.create(Material.WOOD, MaterialColor.OBSIDIAN).hardnessAndResistance(2.0F).sound(SoundType.WOOD));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "peach_log"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "peach_log"));
 	}
 
 }

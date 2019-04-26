@@ -37,5 +37,10 @@ public class ItemList {
 	public static Item PEACH_LEAF_ITEM;
 	public static Item PEACH_SAPLING_ITEM;
 	public static Item SUZAKU_ORICHD_ITEM;
+	public static Item ICE_GRASS_ITEM;
 	public static Item LIANGYI_STONE_ITEM;
+	public static Item THUNDER_WOOD_ITEM;
+	public static Item PURPLR_HEART_GRASS_ITEM;
+	public static Item GOLD_GRASS_ITEM;
+	public static Item CAULDRON_FURNACE_ITEM;
 }

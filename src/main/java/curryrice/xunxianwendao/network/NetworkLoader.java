@@ -13,7 +13,7 @@ import net.minecraftforge.fml.network.simple.SimpleChannel;
 public class NetworkLoader {
 	private static final String PROTOCOL_VERSION = Integer.toString(1);
 	private static SimpleChannel HANDLER = NetworkRegistry.ChannelBuilder
-			.named(new ResourceLocation(XunXianWenDao.modid, "main_channel"))
+			.named(new ResourceLocation(XunXianWenDao.MODID, "main_channel"))
 			.clientAcceptedVersions(PROTOCOL_VERSION::equals)
 			.serverAcceptedVersions(PROTOCOL_VERSION::equals)
 			.networkProtocolVersion(() -> PROTOCOL_VERSION)

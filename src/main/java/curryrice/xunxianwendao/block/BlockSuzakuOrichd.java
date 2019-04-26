@@ -17,6 +17,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReaderBase;
 import net.minecraft.world.World;
 
 public class BlockSuzakuOrichd extends BlockBush{
@@ -25,7 +26,7 @@ public class BlockSuzakuOrichd extends BlockBush{
 
 	public BlockSuzakuOrichd() {
 		super(Block.Properties.create(Material.PLANTS).needsRandomTick().doesNotBlockMovement().hardnessAndResistance(0.0F).sound(SoundType.PLANT));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "suzaku_orichd"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "suzaku_orichd"));
 		this.setDefaultState(this.stateContainer.getBaseState().with(this.getAgeProperty(), Integer.valueOf(0)));
 	}
 	
@@ -38,7 +39,12 @@ public class BlockSuzakuOrichd extends BlockBush{
 			drops.add(new ItemStack(this.getItemDropped(state, world, pos, fortune),1));
 		}
 	}
-	
+
+	@Override
+	public boolean isValidPosition(IBlockState state, IWorldReaderBase worldIn, BlockPos pos) {
+		return this.isValidGround(worldIn.getBlockState(pos.down()), worldIn, pos.down());
+	}
+
 	@Override
 	public boolean isValidGround(IBlockState state, IBlockReader worldIn, BlockPos pos) {
 		return state.getBlock() == Blocks.GRASS_BLOCK;

@@ -29,11 +29,13 @@ import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.apache.commons.lang3.ArrayUtils;
 
 import static net.minecraft.init.Biomes.*;
 
 public class RegisterInit {
+    // -552632656206977839 ocean desert
+    // -6556369896409823215 jungle mountains
+
     private static Biome[] biomesOcean = new Biome[]{OCEAN, DEEP_OCEAN, WARM_OCEAN, LUKEWARM_OCEAN, COLD_OCEAN, DEEP_WARM_OCEAN, DEEP_LUKEWARM_OCEAN, DEEP_COLD_OCEAN, DEEP_FROZEN_OCEAN};
 
     private static Biome[] biomesPlains = new Biome[]{PLAINS, SAVANNA, SAVANNA_PLATEAU, SUNFLOWER_PLAINS, SHATTERED_SAVANNA, SHATTERED_SAVANNA_PLATEAU};
@@ -85,9 +87,7 @@ public class RegisterInit {
 
     public static void registerFeature() {
         // Peach Tree
-        Biome[] biomes = {Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.DARK_FOREST, Biomes.BIRCH_FOREST_HILLS,
-                Biomes.DARK_FOREST_HILLS, Biomes.FLOWER_FOREST};
-        for (Biome b : biomes) {
+        for (Biome b : biomesForest) {
             b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                     Biome.createCompositeFeature(FeatureList.PEACH_TREE_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.AT_SURFACE_WITH_EXTRA,
                             new AtSurfaceWithExtraConfig(10, 0.1F, 1)));
@@ -97,6 +97,25 @@ public class RegisterInit {
         Biomes.FLOWER_FOREST.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                 Biome.createCompositeFeature(FeatureList.SUZAKU_ORICHD_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.TWICE_SURFACE, new FrequencyConfig(5)));
 
+        for(Biome b:biomesFrozen){
+            b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                    Biome.createCompositeFeature(FeatureList.ICE_GRASS_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.TWICE_SURFACE, new FrequencyConfig(5)));
+        }
+
+        for(Biome b:biomesMountains){
+            b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                    Biome.createCompositeFeature(FeatureList.THUNDER_WOOD_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.TWICE_SURFACE, new FrequencyConfig(5)));
+        }
+
+        for(Biome b:biomesSwamp){
+            b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                    Biome.createCompositeFeature(FeatureList.PURPLR_HEART_GRASS_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.TWICE_SURFACE, new FrequencyConfig(5)));
+        }
+
+        for(Biome b:biomesDesert){
+            b.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                    Biome.createCompositeFeature(FeatureList.GOLD_GRASS_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Biome.TWICE_SURFACE, new FrequencyConfig(5)));
+        }
     }
 
 

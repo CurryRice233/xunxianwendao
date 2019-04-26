@@ -11,7 +11,7 @@ public class ItemPeachWoodSword extends ItemSword{
 	
 	public ItemPeachWoodSword() {
 		super(ItemTier.WOOD,4,-2.0F,(new Item.Properties()).group(CreativeTabs.MAIN));
-		this.setRegistryName(new ResourceLocation(XunXianWenDao.modid,"item_peach_wood_sword"));
+		this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID,"item_peach_wood_sword"));
 	}
 	
 	@Override

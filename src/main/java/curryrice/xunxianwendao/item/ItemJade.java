@@ -10,11 +10,11 @@ public class ItemJade extends Item {
 		super(new Item.Properties().group(CreativeTabs.MAIN));
 		switch(meta) {
 		case 1:
-			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_jade_intermediate"));break;
+			this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_jade_intermediate"));break;
 		case 2:
-			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_jade_advanced"));break;
+			this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_jade_advanced"));break;
 		default:
-			this.setRegistryName(new ResourceLocation(XunXianWenDao.modid, "item_jade_primary"));break;
+			this.setRegistryName(new ResourceLocation(XunXianWenDao.MODID, "item_jade_primary"));break;
 		}
 		
 	}

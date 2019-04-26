@@ -11,7 +11,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class RenderEvilZombie extends RenderLivingBase<EntityEvilZombie>{
-	private static final ResourceLocation EVIL_ZOMBIE_TEXTURE = new ResourceLocation(XunXianWenDao.modid + ":" + "textures/entity/evil_zombie.png");
+	private static final ResourceLocation EVIL_ZOMBIE_TEXTURE = new ResourceLocation(XunXianWenDao.MODID + ":" + "textures/entity/evil_zombie.png");
 
 	public RenderEvilZombie(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelZombie(), 0.5F);

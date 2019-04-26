@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 public class RenderXunXianWenDao {
     private static final Minecraft mc = Minecraft.getInstance();
     private static final GuiIngame gui = mc.ingameGUI;
-    private static final ResourceLocation TEXTURE = new ResourceLocation(XunXianWenDao.modid,"textures/gui/bars.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(XunXianWenDao.MODID,"textures/gui/bars.png");
 
     public static void renderMagicBar(ICapabilityXunXianWenDao cap){
         GlStateManager.color3f(1.0F, 1.0F, 1.0F);

@@ -13,7 +13,7 @@ import net.minecraftforge.common.util.LazyOptional;
 
 public class CapabilityXunXianWenDao {
 	public static class ProviderPlayer implements ICapabilitySerializable<NBTTagCompound>{
-		public static final ResourceLocation NAME = new ResourceLocation(XunXianWenDao.modid, "xunxianwendao_level");
+		public static final ResourceLocation NAME = new ResourceLocation(XunXianWenDao.MODID, "xunxianwendao_level");
 		private ICapabilityXunXianWenDao impl = new CapabilityXunXianWenDaoImp();
 		private LazyOptional<ICapabilityXunXianWenDao> cap = LazyOptional.of(() -> impl);
 
