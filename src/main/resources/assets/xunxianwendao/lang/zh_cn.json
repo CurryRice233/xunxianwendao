@@ -10,6 +10,17 @@
 	"item.xunxianwendao.item_peach_century": "百年蟠桃",
 	"item.xunxianwendao.item_peach_millennium": "千年蟠桃",
 
+	"item.xunxianwendao.item_medicine_regeneration": "再生丸",
+	"item.xunxianwendao.item_medicine_strength": "大力丸",
+	"item.xunxianwendao.item_medicine_absorption": "金甲丹",
+	"item.xunxianwendao.item_medicine_resistance": "铁衫丹",
+	"item.xunxianwendao.item_medicine_haste": "急迫丸",
+	"item.xunxianwendao.item_medicine_speed": "速度丸",
+	"item.xunxianwendao.item_medicine_jump_boost": "轻跃丹",
+	"item.xunxianwendao.item_medicine_fire_resistance": "抗火丸",
+	"item.xunxianwendao.item_medicine_night_vision": "夜视丸",
+	"item.xunxianwendao.item_medicine_water_breathing": "龟息丸",
+
 	
 	"item.xunxianwendao.item_talisman_empaty":"空白符",
 	"item.xunxianwendao.item_talisman_unmove":"定身符",
@@ -63,6 +74,12 @@
 	"level.xunxianwendao.pharmacistLevel3":"融会贯通(3)",
 	"level.xunxianwendao.pharmacistLevel4":"出口成章(4)",
 	"level.xunxianwendao.pharmacistLevel5":"满腹经纶(5)",
+
+	"elements.xunxianwendao.metal": "金",
+	"elements.xunxianwendao.wood": "木",
+	"elements.xunxianwendao.water": "水",
+	"elements.xunxianwendao.fire": "火",
+	"elements.xunxianwendao.earth": "土",
 	
 	"itemGroup.xunxianwendao_main": "寻仙问道"
 }

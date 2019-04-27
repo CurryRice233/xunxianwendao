@@ -13,6 +13,17 @@ public class ItemList {
 	public static ItemPeach ITEM_PEACH;
 	public static ItemPeach ITEM_PEACH_CENTURY;
 	public static ItemPeach ITEM_PEACH_MILLENNIUM;
+
+	public static ItemMedicine ITEM_MEDICINE_REGENERATION;
+	public static ItemMedicine ITEM_MEDICINE_STRENGTH;
+	public static ItemMedicine ITEM_MEDICINE_ABSORPTION;
+	public static ItemMedicine ITEM_MEDICINE_RESISTANCE;
+	public static ItemMedicine ITEM_MEDICINE_HASTE;
+	public static ItemMedicine ITEM_MEDICINE_SPEED;
+	public static ItemMedicine ITEM_MEDICINE_JUMP_BOOST;
+	public static ItemMedicine ITEM_MEDICINE_FIRE_RESISTANCE;
+	public static ItemMedicine ITEM_MEDICINE_NIGHT_VISION;
+	public static ItemMedicine ITEM_MEDICINE_WATER_BREATHING;
 	
 	public static ItemTalisman ITEM_TALISMAN_EMPATY;
 	public static ItemTalisman ITEM_TALISMAN_UNMOVE;

@@ -114,6 +114,17 @@ public class XunXianWenDao {
                     ItemList.ITEM_TALISMAN_NAUSEA = new ItemTalisman(5, "nausea"),
                     ItemList.ITEM_TALISMAN_TELEPORT = new ItemTalisman(6, "teleport"),
 
+                    ItemList.ITEM_MEDICINE_REGENERATION = new ItemMedicine(0, "regeneration"),
+                    ItemList.ITEM_MEDICINE_STRENGTH = new ItemMedicine(1, "strength"),
+                    ItemList.ITEM_MEDICINE_ABSORPTION = new ItemMedicine(2, "absorption"),
+                    ItemList.ITEM_MEDICINE_RESISTANCE = new ItemMedicine(3, "resistance"),
+                    ItemList.ITEM_MEDICINE_HASTE = new ItemMedicine(4, "haste"),
+                    ItemList.ITEM_MEDICINE_SPEED = new ItemMedicine(5, "speed"),
+                    ItemList.ITEM_MEDICINE_JUMP_BOOST = new ItemMedicine(6, "jump_boost"),
+                    ItemList.ITEM_MEDICINE_FIRE_RESISTANCE = new ItemMedicine(7, "fire_resistance"),
+                    ItemList.ITEM_MEDICINE_NIGHT_VISION = new ItemMedicine(8, "night_vision"),
+                    ItemList.ITEM_MEDICINE_WATER_BREATHING = new ItemMedicine(9, "water_breathing"),
+
                     ItemList.ITEM_JADE_PICKAXE = new ItemJadePickaxe(),
                     ItemList.ITEM_JADE_SWORD = new ItemJadeSword(),
                     ItemList.ITEM_PEACH_WOOD_SWORD = new ItemPeachWoodSword(),

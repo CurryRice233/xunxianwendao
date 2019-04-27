@@ -10,6 +10,16 @@
 	"item.xunxianwendao.item_peach_century": "Century Peach",
 	"item.xunxianwendao.item_peach_millennium": "Millennium Peach",
 
+	"item.xunxianwendao.item_medicine_regeneration": "再生丸",
+	"item.xunxianwendao.item_medicine_strength": "大力丸",
+	"item.xunxianwendao.item_medicine_absorption": "金甲丹",
+	"item.xunxianwendao.item_medicine_resistance": "铁衫丹",
+	"item.xunxianwendao.item_medicine_haste": "急迫丸",
+	"item.xunxianwendao.item_medicine_speed": "速度丸",
+	"item.xunxianwendao.item_medicine_jump_boost": "轻跃丹",
+	"item.xunxianwendao.item_medicine_fire_resistance": "抗火丸",
+	"item.xunxianwendao.item_medicine_night_vision": "夜视丸",
+	"item.xunxianwendao.item_medicine_water_breathing": "龟息丸",
 	
 	"item.xunxianwendao.item_talisman_empaty":"Empaty Talisman",
 	"item.xunxianwendao.item_talisman_unmove":"Unmove Talisman",
@@ -38,6 +48,33 @@
 	"block.xunxianwendao.cauldron_furnace": "Cauldron Furnace",
 
 	"entity.xunxianwendao.entity_evil_zombie": "Evil Zombie",
+
+	"level.xunxianwendao.level.name":"Level",
+	"level.xunxianwendao.level0":"凡人(0)",
+	"level.xunxianwendao.level1":"炼气(1)",
+	"level.xunxianwendao.level2":"筑基(2)",
+	"level.xunxianwendao.level3":"辟谷(3)",
+	"level.xunxianwendao.level4":"金丹(4)",
+	"level.xunxianwendao.level5":"元婴(5)",
+	"level.xunxianwendao.level6":"出窍(6)",
+	"level.xunxianwendao.level7":"分神(7)",
+	"level.xunxianwendao.level8":"合体(8)",
+	"level.xunxianwendao.level9":"渡劫(9)",
+	"level.xunxianwendao.level10":"大乘(10)",
+
+	"level.xunxianwendao.pharmacistLevel.name":"Pharmacist Level",
+	"level.xunxianwendao.pharmacistLevel0":"一窍不通(0)",
+	"level.xunxianwendao.pharmacistLevel1":"略知一二(1)",
+	"level.xunxianwendao.pharmacistLevel2":"精益求精(2)",
+	"level.xunxianwendao.pharmacistLevel3":"融会贯通(3)",
+	"level.xunxianwendao.pharmacistLevel4":"出口成章(4)",
+	"level.xunxianwendao.pharmacistLevel5":"满腹经纶(5)",
+
+	"elements.xunxianwendao.metal": "Metal",
+	"elements.xunxianwendao.wood": "Wood",
+	"elements.xunxianwendao.water": "Water",
+	"elements.xunxianwendao.fire": "Fire",
+	"elements.xunxianwendao.earth": "Earth",
 	
 	"itemGroup.xunxianwendao_main": "Xun Xian Wen Dao"
 }
