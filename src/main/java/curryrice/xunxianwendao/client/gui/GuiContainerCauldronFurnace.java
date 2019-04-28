@@ -4,6 +4,7 @@ import curryrice.xunxianwendao.XunXianWenDao;
 import curryrice.xunxianwendao.inventory.ContainerCauldronFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiContainerCauldronFurnace extends GuiContainer {
@@ -16,32 +17,32 @@ public class GuiContainerCauldronFurnace extends GuiContainer {
         this.container=containerCauldronFurnace;
     }
 
+    public void render(int mouseX, int mouseY, float partialTicks) {
+        this.drawDefaultBackground();
+        super.render(mouseX,mouseY,partialTicks);
+        this.renderHoveredToolTip(mouseX, mouseY);
+    }
+
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color3f(1.0F, 1.0F, 1.0F);
-        this.drawDefaultBackground();
-
 
         this.mc.getTextureManager().bindTexture(TEXTURE);
         int offsetX = (this.width - this.xSize) / 2, offsetY = (this.height - this.ySize) / 2;
 
         this.drawTexturedModalRect(offsetX, offsetY, 0, 0, this.xSize, this.ySize);
 
-        /*int burnTime=this.inventory.getBurnTime();
-        int cookTime=this.inventory.getCookTime();
-        this.totalBurnTime=inventory.getTotalBurnTime();
-        this.totalCookTime=inventory.getTotalCookTime();
-
-        int cookTextureWidth = 1 + (int) Math.ceil(22.0 * cookTime / this.totalCookTime);
+        int cookTextureWidth = 1 + (int) Math.ceil(22.0 * this.container.getCookTime() / this.container.getTotalCookTime());
         this.drawTexturedModalRect(offsetX + 109, offsetY + 34, 176, 14, cookTextureWidth, 17);
-
-        int burnTextureHeight = 1 + (int) Math.ceil(14.0 * burnTime / this.totalBurnTime);
-        this.drawTexturedModalRect(offsetX + 36, offsetY + 34  + (14-burnTextureHeight), 176, 14-burnTextureHeight, 14, burnTextureHeight);
-        */
         if(container.isBurning()){
             this.drawTexturedModalRect(offsetX + 35, offsetY + 48, 177, 0, 14, 14);
         }
+    }
 
-
+    @Override
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
+    {
+        String title = I18n.format("block.xunxianwendao.cauldron_furnace");
+        //this.fontRenderer.drawString(title+this.totalBurnTime+" "+this.totalCookTime+" "+inventory.getBurnTime()+" "+inventory.getCookTime()+" "+inventory.getPExp(), (this.xSize - this.fontRenderer.getStringWidth(title)) / 2, 6, 0x404040);
     }
 }

@@ -21,7 +21,7 @@ public class ContainerCauldronFurnace extends Container {
     private int totalCookTime = 0;
     private float PExp = 0;
 
-    protected TileEntityCauldronFurnace tileEntity;
+    private TileEntityCauldronFurnace tileEntity;
 
     public ContainerCauldronFurnace(InventoryPlayer playerInv, TileEntityCauldronFurnace tileEntity) {
         super();
@@ -110,5 +110,38 @@ public class ContainerCauldronFurnace extends Container {
     }
     public float getPExp() {
         return PExp;
+    }
+
+    @Override
+    public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
+        Slot slot = inventorySlots.get(index);
+
+        if (slot == null || !slot.getHasStack()) {
+            return ItemStack.EMPTY;
+        }
+
+        ItemStack newStack = slot.getStack(), oldStack = newStack.copy();
+        boolean isMerged = false;
+
+        if (index >=0 && index <4) {
+            isMerged = mergeItemStack(newStack, 4, 40, true);
+        } else if (index >= 4 && index < 31) {
+            isMerged = mergeItemStack(newStack, 0, 4, false) || mergeItemStack(newStack, 31, 40, false);
+        } else if (index >= 31 && index < 40) {
+            isMerged = mergeItemStack(newStack, 0, 4, false) || mergeItemStack(newStack, 4, 31, false);
+        }
+
+        if (!isMerged) {
+            return ItemStack.EMPTY;
+        }
+
+        if (newStack.getMaxStackSize() == 0) {
+            slot.putStack(null);
+        } else {
+            slot.onSlotChanged();
+        }
+
+        slot.onTake(playerIn, newStack);
+        return oldStack;
     }
 }

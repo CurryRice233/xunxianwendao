@@ -9,6 +9,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
@@ -23,6 +25,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.items.CapabilityItemHandler;
 
 import javax.annotation.Nullable;
 
@@ -49,12 +52,28 @@ public class BlockCauldronFurnace extends BlockContainer {
     }
 
     @Override
+    public void onReplaced(IBlockState state, World world, BlockPos pos, IBlockState newState, boolean isMoving) {
+        TileEntity tileEntity = world.getTileEntity(pos);
+        if(tileEntity!=null){
+            tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(cap->{
+                for(int i=0;i<cap.getSlots();i++){
+                    ItemStack itemstack = cap.getStackInSlot(i);
+                    if (!itemstack.isEmpty()) {
+                        InventoryHelper.spawnItemStack(world, pos.getX(), pos.getY(), pos.getZ(), itemstack);
+                    }
+                }
+            });
+        }
+        super.onReplaced(state,world,pos,newState,isMoving);
+    }
+
+    @Override
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos){
-        if(worldIn.getBlockState(pos.down()).getBlock()== Blocks.FIRE){
+        /*if(worldIn.getBlockState(pos.down()).getBlock()== Blocks.FIRE){
             worldIn.setBlockState(pos,BlockList.CAULDRON_FURNACE.getDefaultState().with(this.getBurningProperty(), Boolean.TRUE));
         }else{
             worldIn.setBlockState(pos,BlockList.CAULDRON_FURNACE.getDefaultState().with(this.getBurningProperty(), Boolean.FALSE));
-        }
+        }*/
 
     }
 
