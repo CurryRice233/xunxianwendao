@@ -117,7 +117,12 @@ public class EntityTalisman extends EntityThrowable{
     protected float getGravityVelocity(){
         return 0.0F;
     }
-	
+
+    @Override
+	public boolean isInWater() {
+		return false;
+	}
+
 	@Override
 	public void tick() {
 		if(this.ticksToWait.get()==-1) {

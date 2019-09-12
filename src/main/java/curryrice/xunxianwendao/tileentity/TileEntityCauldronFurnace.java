@@ -77,7 +77,7 @@ public class TileEntityCauldronFurnace extends TileEntity implements ITickable {
         if (cap.equals(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)) {
                 return LazyOptional.of(() -> inventory).cast();
         }
-        return super.getCapability(cap,side);
+        return LazyOptional.empty();
     }
 
 
