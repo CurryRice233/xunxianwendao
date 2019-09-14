@@ -18,4 +18,13 @@ public class BlockList {
 	public static BlockGoldGrass GOLD_GRASS;
 
 	public static BlockCauldronFurnace CAULDRON_FURNACE;
+
+	public static BlockTrigram TRIGRAM_QIAN;
+	public static BlockTrigram TRIGRAM_DUI;
+	public static BlockTrigram TRIGRAM_LI;
+	public static BlockTrigram TRIGRAM_ZHEN;
+	public static BlockTrigram TRIGRAM_XUN;
+	public static BlockTrigram TRIGRAM_KAN;
+	public static BlockTrigram TRIGRAM_GEN;
+	public static BlockTrigram TRIGRAM_KUN;
 }

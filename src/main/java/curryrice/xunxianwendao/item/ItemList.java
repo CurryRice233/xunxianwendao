@@ -54,4 +54,13 @@ public class ItemList {
 	public static Item PURPLR_HEART_GRASS_ITEM;
 	public static Item GOLD_GRASS_ITEM;
 	public static Item CAULDRON_FURNACE_ITEM;
+
+	public static Item TRIGRAM_QIAN_ITEM;
+	public static Item TRIGRAM_DUI_ITEM;
+	public static Item TRIGRAM_LI_ITEM;
+	public static Item TRIGRAM_ZHEN_ITEM;
+	public static Item TRIGRAM_XUN_ITEM;
+	public static Item TRIGRAM_KAN_ITEM;
+	public static Item TRIGRAM_GEN_ITEM;
+	public static Item TRIGRAM_KUN_ITEM;
 }

@@ -143,6 +143,15 @@ public class XunXianWenDao {
                     ItemList.PURPLR_HEART_GRASS_ITEM = registerBlockItem(BlockList.PURPLR_HEART_GRASS, CreativeTabs.MAIN),
                     ItemList.GOLD_GRASS_ITEM = registerBlockItem(BlockList.GOLD_GRASS, CreativeTabs.MAIN),
 
+                    ItemList.TRIGRAM_QIAN_ITEM = registerBlockItem(BlockList.TRIGRAM_QIAN, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_DUI_ITEM = registerBlockItem(BlockList.TRIGRAM_DUI, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_LI_ITEM = registerBlockItem(BlockList.TRIGRAM_LI, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_ZHEN_ITEM = registerBlockItem(BlockList.TRIGRAM_ZHEN, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_XUN_ITEM = registerBlockItem(BlockList.TRIGRAM_XUN, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_KAN_ITEM = registerBlockItem(BlockList.TRIGRAM_KAN, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_GEN_ITEM = registerBlockItem(BlockList.TRIGRAM_GEN, CreativeTabs.MAIN),
+                    ItemList.TRIGRAM_KUN_ITEM = registerBlockItem(BlockList.TRIGRAM_KUN, CreativeTabs.MAIN),
+
                     ItemList.CAULDRON_FURNACE_ITEM = registerBlockItem(BlockList.CAULDRON_FURNACE, CreativeTabs.MAIN)
             );
 
@@ -166,7 +175,16 @@ public class XunXianWenDao {
                     BlockList.PURPLR_HEART_GRASS = new BlockPurpleHeartGrass(),
                     BlockList.GOLD_GRASS = new BlockGoldGrass(),
 
-                    BlockList.CAULDRON_FURNACE = new BlockCauldronFurnace()
+                    BlockList.CAULDRON_FURNACE = new BlockCauldronFurnace(),
+
+                    BlockList.TRIGRAM_QIAN = new BlockTrigram(1,"qian"),
+                    BlockList.TRIGRAM_DUI= new BlockTrigram(2,"dui"),
+                    BlockList.TRIGRAM_LI= new BlockTrigram(3,"li"),
+                    BlockList.TRIGRAM_ZHEN= new BlockTrigram(4,"zhen"),
+                    BlockList.TRIGRAM_XUN= new BlockTrigram(5,"xun"),
+                    BlockList.TRIGRAM_KAN= new BlockTrigram(6,"kan"),
+                    BlockList.TRIGRAM_GEN= new BlockTrigram(7,"gen"),
+                    BlockList.TRIGRAM_KUN= new BlockTrigram(8,"kun")
             );
 
             logger.info("Blocks registered.");

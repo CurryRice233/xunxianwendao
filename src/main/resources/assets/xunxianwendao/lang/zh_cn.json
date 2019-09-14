@@ -47,7 +47,18 @@
 	"block.xunxianwendao.purple_heart_grass": "紫心草",
 	"block.xunxianwendao.gold_grass": "金丝草",
 
+	"block.xunxianwendao.trigram_qian": "乾卦",
+	"block.xunxianwendao.trigram_dui": "兑卦",
+	"block.xunxianwendao.trigram_li": "离卦",
+	"block.xunxianwendao.trigram_zhen": "震卦",
+	"block.xunxianwendao.trigram_xun": "巽卦",
+	"block.xunxianwendao.trigram_kan": "坎卦",
+	"block.xunxianwendao.trigram_gen": "艮卦",
+	"block.xunxianwendao.trigram_kun": "坤卦",
+
 	"block.xunxianwendao.cauldron_furnace": "炼药炉",
+
+
 	
 	"entity.xunxianwendao.entity_evil_zombie": "恶灵僵尸",
 	

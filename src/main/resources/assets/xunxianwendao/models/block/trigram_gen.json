@@ -1,0 +1,105 @@
+{
+  "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+  "textures": {
+    "trigram": "xunxianwendao:block/trigram"
+  },
+  "display": {
+    "gui": {
+      "rotation": [ 30, 45, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 0.625, 0.625, 0.625 ]
+    },
+    "ground": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 0, 3, 0 ],
+      "scale": [ 0.25, 0.25, 0.25 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "head": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 315, 0 ],
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.4, 0.4, 0.4 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 75, 315, 0 ],
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    }
+  },
+  "elements": [
+    {
+      "name": "Cube",
+      "from": [ 2, 0, 2 ],
+      "to": [ 14, 2, 4 ],
+      "faces": {
+        "north": { "texture": "#trigram", "uv": [ 0, 0, 12, 2 ] },
+        "east": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#trigram", "uv": [ 0, 0, 12, 2 ] },
+        "west": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#trigram", "uv": [ 0, 0, 12, 2 ] },
+        "down": { "texture": "#trigram", "uv": [ 0, 0, 12, 2 ] }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [ 2, 0, 7 ],
+      "to": [ 7, 2, 9 ],
+      "faces": {
+        "north": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "east": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "west": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "down": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [ 2, 0, 12 ],
+      "to": [ 7, 2, 14 ],
+      "faces": {
+        "north": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "east": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "west": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "down": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [ 9, 0, 12 ],
+      "to": [ 14, 2, 14 ],
+      "faces": {
+        "north": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "east": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "west": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "down": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [ 9, 0, 7 ],
+      "to": [ 14, 2, 9 ],
+      "faces": {
+        "north": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "east": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "west": { "texture": "#trigram", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] },
+        "down": { "texture": "#trigram", "uv": [ 0, 0, 5, 2 ] }
+      }
+    }
+  ]
+}
