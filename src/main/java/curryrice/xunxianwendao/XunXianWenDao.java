@@ -128,6 +128,7 @@ public class XunXianWenDao {
                     ItemList.ITEM_JADE_PICKAXE = new ItemJadePickaxe(),
                     ItemList.ITEM_JADE_SWORD = new ItemJadeSword(),
                     ItemList.ITEM_PEACH_WOOD_SWORD = new ItemPeachWoodSword(),
+                    ItemList.ITEM_TELEPORT_FLAG = new ItemTeleportFlag(),
 
                     // Blocks
                     ItemList.JADE_ORE_ITEM = registerBlockItem(BlockList.JADE_ORE, CreativeTabs.MAIN),

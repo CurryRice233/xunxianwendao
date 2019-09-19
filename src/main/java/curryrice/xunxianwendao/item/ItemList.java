@@ -36,6 +36,7 @@ public class ItemList {
 	public static ItemJadePickaxe ITEM_JADE_PICKAXE;
 	public static ItemJadeSword ITEM_JADE_SWORD;
 	public static ItemPeachWoodSword ITEM_PEACH_WOOD_SWORD;
+	public static ItemTeleportFlag ITEM_TELEPORT_FLAG;
 	
 	
 	
